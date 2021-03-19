@@ -12,7 +12,7 @@ func (tree *Tree) LoadJson(jsonData []byte) error {
 
 	if err := json.Unmarshal(jsonData, &root); err != nil {
 		tree.root = nil
-		return errors.New(fmt.Sprintf(`It found error parsing JSON. "%s"`, err))
+		return errors.New(fmt.Sprintf(`Error on parsing JSON, %s`, err))
 	}
 	tree.root = &root
 	return nil

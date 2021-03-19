@@ -13,7 +13,7 @@ func TestTree(t *testing.T) {
 	if err := obj.LoadJson([]byte(invalidJson)); err != nil {
 		log.Println("Expected error:", err)
 	} else {
-		t.Error("LoadJson() error.", err)
+		t.Error("LoadJson() error.")
 	}
 
 	if err := obj.LoadJson([]byte(validJson)); err != nil {
